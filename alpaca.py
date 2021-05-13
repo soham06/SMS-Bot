@@ -33,7 +33,7 @@ def post_buy_stock(ticker, quantity, order, price):
                 time_in_force='gtc',
                 limit_price=float(price)
             )
-            message = f"Successfully placed Limit Buy Order for {quantity} {ticker} shares"
+            message = f"Successfully placed Market Buy Order for {quantity} {ticker} shares"
             return message
         else:
             api.submit_order(
